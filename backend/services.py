@@ -36,11 +36,11 @@ def score_to_label(score: float) -> str:
 
 def seed_departments(db: Session):
     defaults = [
-        {"name": "Road Maintenance",  "contact_email": "roads@civictrack.gov",     "supported_issue_types": "pothole"},
-        {"name": "Sanitation",        "contact_email": "sanitation@civictrack.gov","supported_issue_types": "garbage"},
-        {"name": "Electrical",        "contact_email": "electrical@civictrack.gov","supported_issue_types": "streetlight"},
-        {"name": "Water & Sewer",     "contact_email": "water@civictrack.gov",     "supported_issue_types": "drainage"},
-        {"name": "General Services",  "contact_email": "general@civictrack.gov",   "supported_issue_types": "other"},
+        {"name": "Road Maintenance",  "contact_email": "roads@letsfix.gov",     "supported_issue_types": "pothole"},
+        {"name": "Sanitation",        "contact_email": "sanitation@letsfix.gov","supported_issue_types": "garbage"},
+        {"name": "Electrical",        "contact_email": "electrical@letsfix.gov","supported_issue_types": "streetlight"},
+        {"name": "Water & Sewer",     "contact_email": "water@letsfix.gov",     "supported_issue_types": "drainage"},
+        {"name": "General Services",  "contact_email": "general@letsfix.gov",   "supported_issue_types": "other"},
     ]
     for d in defaults:
         if not db.query(models.Department).filter(models.Department.name == d["name"]).first():

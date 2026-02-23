@@ -8,7 +8,7 @@ load_dotenv()
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres:password@localhost:5432/civictrack"
+    "postgresql://postgres:password@localhost:5432/letsfix"
 )
 
 engine = create_engine(DATABASE_URL)

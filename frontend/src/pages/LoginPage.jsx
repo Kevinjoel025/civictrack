@@ -17,7 +17,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 px-4">
       <div className="max-w-md w-full mx-auto">
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 text-blue-600 font-bold text-xl"><MapPin className="w-7 h-7" />CivicTrack</Link>
+          <Link to="/" className="inline-flex items-center gap-2 text-blue-600 font-bold text-xl"><MapPin className="w-7 h-7" />letsfix</Link>
           <h2 className="text-2xl font-bold mt-4">Sign in</h2>
           <p className="text-gray-500 text-sm mt-1">No account? <Link to="/signup" className="text-blue-600 hover:underline">Sign up</Link></p>
         </div>

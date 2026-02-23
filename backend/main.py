@@ -8,7 +8,7 @@ from routers import auth, reports, departments, votes
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="CivicTrack API", version="1.0.0")
+app = FastAPI(title="letsfix API", version="1.0.0")
 
 logger = logging.getLogger("uvicorn.error")
 
@@ -34,7 +34,7 @@ app.include_router(departments.router, prefix="/api/departments", tags=["Departm
 app.include_router(votes.router,       prefix="/api/votes",       tags=["Votes"])
 
 @app.get("/")
-def root(): return {"message": "CivicTrack API is running"}
+def root(): return {"message": "letsfix API is running"}
 
 @app.get("/health")
 def health(): return {"status": "ok"}

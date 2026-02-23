@@ -9,7 +9,7 @@ export default function SignupPage() {
   const handle = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   const submit = async e => {
     e.preventDefault(); setLoading(true)
-    try { await signup(form.name, form.email, form.password, form.ward); toast.success('Welcome to CivicTrack!'); navigate('/dashboard') }
+    try { await signup(form.name, form.email, form.password, form.ward); toast.success('Welcome to letsfix!'); navigate('/dashboard') }
     catch (err) { toast.error(err.response?.data?.detail || 'Signup failed') }
     finally { setLoading(false) }
   }
@@ -17,7 +17,7 @@ export default function SignupPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 px-4">
       <div className="max-w-md w-full mx-auto">
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 text-blue-600 font-bold text-xl"><MapPin className="w-7 h-7" />CivicTrack</Link>
+          <Link to="/" className="inline-flex items-center gap-2 text-blue-600 font-bold text-xl"><MapPin className="w-7 h-7" />letsfix</Link>
           <h2 className="text-2xl font-bold mt-4">Create your account</h2>
           <p className="text-gray-500 text-sm mt-1">Have an account? <Link to="/login" className="text-blue-600 hover:underline">Sign in</Link></p>
         </div>
